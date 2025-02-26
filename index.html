@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片压缩工具</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>图片压缩工具</h1>
+            <p class="subtitle">简单、快速地压缩您的图片</p>
+        </header>
+
+        <main>
+            <div class="upload-area" id="dropZone">
+                <svg class="upload-icon" width="40" height="40" viewBox="0 0 40 40">
+                    <path d="M20 8v20M10 18l10-10 10 10" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M10 28h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <p>拖放图片到这里 或 <label class="upload-button" for="fileInput">选择文件</label></p>
+                <input type="file" id="fileInput" accept="image/png,image/jpeg" hidden>
+            </div>
+
+            <div class="preview-container" id="previewContainer" hidden>
+                <div class="preview-box">
+                    <h3>原始图片</h3>
+                    <div class="image-preview">
+                        <img id="originalPreview" alt="原始图片预览" style="display: none;">
+                    </div>
+                    <div class="file-info">
+                        <span>文件大小：</span>
+                        <span id="originalSize">0 KB</span>
+                    </div>
+                </div>
+
+                <div class="preview-box">
+                    <h3>压缩后</h3>
+                    <div class="image-preview">
+                        <img id="compressedPreview" alt="压缩后预览" style="display: none;">
+                    </div>
+                    <div class="file-info">
+                        <span>文件大小：</span>
+                        <span id="compressedSize">0 KB</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls" id="controls" hidden>
+                <div class="quality-control">
+                    <label for="quality">压缩质量：<span id="qualityValue">80%</span></label>
+                    <input type="range" id="quality" min="1" max="100" value="80">
+                </div>
+                <button id="downloadBtn" class="download-button">下载压缩后的图片</button>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
