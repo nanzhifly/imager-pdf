@@ -81,8 +81,20 @@ document.addEventListener('DOMContentLoaded', () => {
             ctx.drawImage(img, 0, 0);
             
             canvas.toBlob((blob) => {
+                if (blob.size > file.size) {
+                    compressedPreview.src = URL.createObjectURL(file);
+                    compressedSize.textContent = formatFileSize(file.size);
+                    
+                    downloadBtn.onclick = () => {
+                        const link = document.createElement('a');
+                        link.href = URL.createObjectURL(file);
+                        link.download = `compressed_${originalFile.name}`;
+                        link.click();
+                    };
+                    return;
+                }
+
                 compressedPreview.src = URL.createObjectURL(blob);
-                compressedPreview.style.display = 'block';
                 compressedSize.textContent = formatFileSize(blob.size);
                 
                 downloadBtn.onclick = () => {
