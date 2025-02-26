@@ -14,7 +14,11 @@
 
 ## 在线使用
 
-- ✨ 在线地址：https://nanzhifly.github.io/imager-pdf/
+- ✨ 在线地址：
+- - GitHub Pages: https://nanzhifly.github.io/imager-pdf/
+- - Vercel: https://imager-pdf.vercel.app/
+
+> 推荐使用 Vercel 链接访问，速度更快
 
 💡 使用提示：
 - 对于已经优化过的小图片，压缩效果可能不明显
