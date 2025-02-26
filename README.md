@@ -14,7 +14,12 @@
 
 ## 在线使用
 
-访问 https://nanzhifly.github.io/imager-pdf/ 即可使用在线版本
+- ✨ 在线地址：https://nanzhifly.github.io/imager-pdf/
+
+💡 使用提示：
+- 对于已经优化过的小图片，压缩效果可能不明显
+- 建议对大图片（1MB以上）使用，效果最佳
+- 可以通过调节压缩质量来平衡图片大小和质量
 
 ## 技术实现
 
